@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bacrub — Know your level. Keep your cool.</title>
+    <title>Bacrub — Know Before You Go™</title>
     <meta
       name="description"
-      content="Bacrub is a sleek, pen-style breathalyzer with a calming haptic massage function. Check your BAC, keep your cool, and make smarter calls."
+      content="Bacrub is a personal decision device for clarity before action, combining reflection, somatic acupressure, and BAC verification."
     />
     <meta name="theme-color" content="#020617" />
-    <meta property="og:title" content="Bacrub — Know your level. Keep your cool." />
+    <meta property="og:title" content="Bacrub — Know Before You Go™" />
     <meta
       property="og:description"
-      content="A premium concept landing page for a discreet breathalyzer with a haptic reset experience."
+      content="A clarity tool that combines a pen, somatic acupressure massager, and breathalyzer in one pocketable ritual."
     />
     <meta property="og:type" content="website" />
 
@@ -22,20 +22,16 @@
   <body class="text-slate-100 antialiased selection:bg-cyan-400/25">
     <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
       <div class="absolute inset-x-0 top-0 h-[40rem] hero-grid opacity-40"></div>
-      <div class="absolute -left-24 top-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
-      <div class="absolute right-0 top-32 h-80 w-80 rounded-full bg-fuchsia-500/10 blur-3xl"></div>
-      <div class="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-sky-500/10 blur-3xl"></div>
     </div>
 
     <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/65 glass">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#top" class="flex items-center gap-3">
-          <div class="flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/30 bg-cyan-400/10 shadow-lg shadow-cyan-900/30">
-            <span class="text-sm font-black tracking-[0.25em] text-cyan-200">BAC</span>
-          </div>
           <div>
-            <div class="text-sm font-semibold tracking-[0.24em] text-slate-200">BACRUB</div>
-            <div class="text-xs text-slate-400">Breathe. Check. Reset.</div>
+            <div class="text-2xl font-black tracking-[0.08em] drop-shadow-[0_2px_0_rgba(0,0,0,0.65)]">
+              <span class="text-white">BAC</span><span class="text-cyan-500">RUB</span>
+            </div>
+            <div class="text-xs font-bold tracking-[0.18em] text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.75)]">KNOW BEFORE YOU GO.</div>
           </div>
         </a>
 
@@ -79,22 +75,38 @@
     </header>
 
     <main id="top">
-      <section class="relative overflow-hidden">
-        <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
-          <div class="max-w-2xl">
-            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/5 px-4 py-2 text-xs font-medium text-cyan-100 shadow-lg shadow-slate-950/30">
+      <section class="relative min-h-[calc(100vh-4.5rem)] overflow-hidden">
+        <video
+          id="heroVideo"
+          src="assets/runway/latest.mp4"
+          poster="assets/media/bacrub-product-bac-screen.png"
+          class="absolute inset-0 h-full w-full object-cover"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <div class="absolute inset-0 bg-slate-950/55"></div>
+        <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-950 to-transparent"></div>
+
+        <div class="relative mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-7xl items-end px-6 pb-14 pt-28 lg:px-8 lg:pb-20">
+          <div class="max-w-3xl">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-slate-950/45 px-4 py-2 text-xs font-medium text-cyan-100 shadow-lg shadow-slate-950/30">
               <span class="inline-block h-2 w-2 rounded-full bg-cyan-300"></span>
-              Premium concept landing page for a dual-purpose breathalyzer
+              Confidence, clarity, and better decisions
             </div>
 
-            <h1 class="max-w-3xl text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Know your level.
-              <span class="bg-gradient-to-r from-cyan-200 via-sky-300 to-violet-300 bg-clip-text text-transparent">Keep your cool.</span>
+            <h1 class="text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Know Before You Go™
             </h1>
 
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Bacrub blends discreet BAC checks with a calming haptic massage in a pen-sized form.
-              It looks refined, feels personal, and gives you one more moment to make a smarter call.
+            <div class="mt-6 grid max-w-2xl gap-3 text-xl font-semibold text-white sm:text-2xl">
+              <div>Know Before You React™</div>
+              <div>Know Before You Act™</div>
+            </div>
+
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-100 sm:text-xl">
+              BacRub helps you pause long enough to think clearly before stress, uncertainty, or emotion becomes the loudest voice in the room.
             </p>
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -105,93 +117,111 @@
                 Join the waitlist
               </a>
               <a
-                href="#how-it-works"
-                class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
+                href="#productProof"
+                class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-slate-100 transition hover:bg-white/15"
               >
-                See how it works
+                See the product
               </a>
             </div>
 
-            <div class="mt-10 grid gap-4 sm:grid-cols-3">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg shadow-slate-950/30">
-                <div class="text-2xl font-bold text-white">Pen-size</div>
-                <div class="mt-1 text-sm text-slate-400">Pocketable, discreet, easy to carry</div>
+            <div class="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
+              <div class="border-l border-cyan-200/40 pl-4">
+                <div class="text-2xl font-bold text-white">0.00%</div>
+                <div class="mt-1 text-sm text-slate-300">Know before you go</div>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg shadow-slate-950/30">
-                <div class="text-2xl font-bold text-white">OLED readout</div>
-                <div class="mt-1 text-sm text-slate-400">Clear BAC status at a glance</div>
+              <div class="border-l border-cyan-200/40 pl-4">
+                <div class="text-2xl font-bold text-white">Ground</div>
+                <div class="mt-1 text-sm text-slate-300">Know before you react</div>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg shadow-slate-950/30">
-                <div class="text-2xl font-bold text-white">USB-C</div>
-                <div class="mt-1 text-sm text-slate-400">Modern charging for nights out and travel</div>
+              <div class="border-l border-cyan-200/40 pl-4">
+                <div class="text-2xl font-bold text-white">Write</div>
+                <div class="mt-1 text-sm text-slate-300">Know before you act</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="productProof" class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Product detail</div>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">The BAC reading is visible on the device.</h2>
+            <p class="mt-4 max-w-xl text-slate-400">
+              The launch visual now leads with motion, while this product shot gives buyers the clear hardware proof: screen, clip, buttons, USB-C, and massage end.
+            </p>
+          </div>
+          <img
+            src="assets/media/bacrub-product-bac-screen.png"
+            alt="Bacrub pen breathalyzer with BAC reading on the screen and massage end cap"
+            data-runway-src="assets/runway/latest.mp4"
+            class="aspect-[4/3] w-full rounded-[1.5rem] border border-white/10 object-cover shadow-2xl shadow-slate-950/50"
+          />
+        </div>
+      </section>
+
+      <section id="decisionSystem" class="border-y border-white/10 bg-[#06111b]/80 px-6 py-16 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+            <div>
+              <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Decision confidence</div>
+              <h2 class="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
+                Most mistakes do not happen because people are careless. They happen without clarity.
+              </h2>
+              <p class="mt-5 max-w-xl text-base leading-7 text-slate-300">
+                They happen in moments of stress, uncertainty, and emotion moving faster than judgment. BacRub was built around a simple belief: the right decision starts with a moment of clarity.
+              </p>
+              <div class="mt-8 rounded-lg border border-cyan-300/20 bg-cyan-400/10 p-6">
+                <div class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-100">Three tools. One purpose.</div>
+                <p class="mt-3 text-3xl font-semibold leading-9 text-white">Clarity.</p>
               </div>
             </div>
 
-            <div class="mt-10 flex flex-wrap items-center gap-4 text-sm text-slate-400">
-              <span class="rounded-full border border-white/10 px-3 py-1.5">Discreet wellness-first design</span>
-              <span class="rounded-full border border-white/10 px-3 py-1.5">Portable BAC awareness</span>
-              <span class="rounded-full border border-white/10 px-3 py-1.5">Haptic massage end-cap</span>
+            <div class="grid gap-5 md:grid-cols-3">
+              <article class="rounded-lg border border-white/10 bg-slate-950/80 p-6 shadow-xl shadow-slate-950/30">
+                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Know Before You Go™</div>
+                <h3 class="mt-4 text-2xl font-semibold text-white">The breathalyzer replaces guessing with certainty.</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">
+                  Use it before leaving a concert, walking out of a bar, exiting a festival, or deciding whether to drive.
+                </p>
+              </article>
+
+              <article class="rounded-lg border border-white/10 bg-slate-950/80 p-6 shadow-xl shadow-slate-950/30">
+                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Know Before You React™</div>
+                <h3 class="mt-4 text-2xl font-semibold text-white">The somatic acupressure massager restores focus.</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">
+                  Use it to release tension, calm the moment, and reconnect mind and body before reacting.
+                </p>
+              </article>
+
+              <article class="rounded-lg border border-white/10 bg-slate-950/80 p-6 shadow-xl shadow-slate-950/30">
+                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Know Before You Act™</div>
+                <h3 class="mt-4 text-2xl font-semibold text-white">The pen captures your thoughts.</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">
+                  Use it to write it down, reflect, and turn a reaction into a more intentional next step.
+                </p>
+              </article>
             </div>
           </div>
 
-          <div class="relative mx-auto flex w-full max-w-xl items-center justify-center">
-            <div class="absolute inset-x-8 bottom-10 h-40 rounded-full bg-cyan-400/10 blur-3xl"></div>
-            <div class="relative w-full rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/50 glass">
-              <div class="mb-5 flex items-center justify-between gap-4">
-                <div>
-                  <div class="text-sm font-semibold tracking-[0.2em] text-cyan-100">PRODUCT PREVIEW</div>
-                  <div class="mt-1 text-sm text-slate-400">Minimal, discreet, and slightly futuristic</div>
-                </div>
-                <div class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
-                  GitHub Pages ready
-                </div>
-              </div>
+          <div class="mt-10 rounded-lg border border-white/10 bg-white/5 p-6 lg:p-8">
+            <p class="max-w-5xl text-lg leading-8 text-slate-200">
+              Together, those tools create something bigger than a gadget: a ritual. A reminder that the best decisions are rarely rushed. Because confidence isn&#39;t guessing. Confidence is knowing.
+            </p>
+          </div>
 
-              <div class="relative flex min-h-[34rem] items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-slate-900/80 to-slate-950 p-6 fade-edge">
-                <div class="absolute left-6 top-6 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
-                  Sensor + OLED + haptic motor
-                </div>
-
-                <div class="absolute right-6 top-6 w-44 rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-xs text-slate-300 shadow-xl shadow-slate-950/40">
-                  <div class="font-semibold text-white">Mood of the page</div>
-                  <p class="mt-2 leading-5 text-slate-400">
-                    Wellness-adjacent, premium, and not screaming “I’m a gadget.”
-                  </p>
-                </div>
-
-                <div class="relative flex h-[30rem] w-40 items-center justify-center">
-                  <div class="absolute top-0 h-12 w-14 rounded-t-[2rem] border border-white/20 bg-gradient-to-b from-slate-100/80 to-slate-300/70 shadow-lg"></div>
-                  <div class="absolute top-8 h-[22rem] w-28 rounded-[2.6rem] device-shell"></div>
-                  <div class="absolute top-12 h-[21rem] w-20 rounded-[2rem] border border-white/20 device-core opacity-80"></div>
-                  <div class="absolute top-20 flex h-16 w-14 flex-col items-center justify-center rounded-2xl border border-cyan-300/20 bg-slate-950/80 display-glow">
-                    <div class="text-[10px] font-semibold tracking-[0.18em] text-cyan-100">BAC</div>
-                    <div class="mt-1 text-lg font-black text-cyan-200">0.03</div>
-                  </div>
-                  <div class="absolute top-40 flex flex-col gap-3">
-                    <span class="h-2 w-10 rounded-full bg-white/30"></span>
-                    <span class="h-2 w-10 rounded-full bg-white/15"></span>
-                    <span class="h-2 w-10 rounded-full bg-white/10"></span>
-                  </div>
-                  <div class="absolute bottom-[6.4rem] h-2 w-8 rounded-full bg-cyan-200/70 shadow-[0_0_20px_rgba(103,232,249,0.5)]"></div>
-                  <div class="absolute bottom-[4.8rem] h-4 w-10 rounded-full border border-white/20 bg-slate-700/80"></div>
-                  <div class="absolute bottom-6 h-16 w-16 rounded-full border border-cyan-200/20 bg-gradient-to-b from-slate-200/70 via-slate-400/50 to-slate-700/60 shadow-2xl"></div>
-                </div>
-
-                <div class="absolute bottom-6 left-6 right-6 grid gap-3 sm:grid-cols-3">
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-3 text-sm text-slate-300">
-                    <div class="font-semibold text-white">Discreet form</div>
-                    <div class="mt-1 text-xs text-slate-400">Feels more like a personal item than a tester</div>
-                  </div>
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-3 text-sm text-slate-300">
-                    <div class="font-semibold text-white">Quick feedback</div>
-                    <div class="mt-1 text-xs text-slate-400">Simple display and light-based status cues</div>
-                  </div>
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-3 text-sm text-slate-300">
-                    <div class="font-semibold text-white">Haptic reset</div>
-                    <div class="mt-1 text-xs text-slate-400">A built-in pause before the next move</div>
-                  </div>
-                </div>
-              </div>
+          <div class="mt-10 grid gap-5 md:grid-cols-3">
+            <div class="rounded-lg border border-white/10 bg-white/5 p-5">
+              <div class="text-sm font-semibold text-white">Go</div>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Breathalyzer verification for safe driving, nightlife, festivals, and responsible decisions.</p>
+            </div>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-5">
+              <div class="text-sm font-semibold text-white">React</div>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Somatic acupressure support for anxiety, stress management, and emotional regulation.</p>
+            </div>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-5">
+              <div class="text-sm font-semibold text-white">Act</div>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Pen-based reflection for journaling, productivity, focus, and personal growth.</p>
             </div>
           </div>
         </div>
@@ -200,11 +230,26 @@
       <section id="features" class="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
         <div class="flex max-w-3xl flex-col gap-3">
           <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Features</div>
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">A landing page built around what makes the product different.</h2>
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">One pocket tool for reflection, regulation, and verification.</h2>
           <p class="text-slate-400">
-            The strongest angle is not just “portable breathalyzer.” It is “smarter decision-making with calmer design.”
+            Write down what matters, release tension through somatic acupressure, and replace BAC guessing with certainty.
           </p>
         </div>
+
+        <article class="mt-10 grid overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 shadow-xl shadow-slate-950/30 lg:grid-cols-[1.05fr_0.95fr]">
+          <img
+            src="assets/media/bacrub-calendar-pen.png"
+            alt="Bacrub pen on a calendar with know before you go message"
+            class="h-full min-h-72 w-full object-cover"
+          />
+          <div class="flex flex-col justify-center p-6 lg:p-8">
+            <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Know before you go</div>
+            <h3 class="mt-4 text-2xl font-semibold text-white">Fits the daily carry ritual.</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">
+              BacRub is designed to live where decisions happen: clipped like a pen, used to release tension, and checked before leaving.
+            </p>
+          </div>
+        </article>
 
         <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-slate-950/30">
@@ -225,17 +270,17 @@
 
           <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-slate-950/30">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/15 text-cyan-100">03</div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Haptic massage end-cap</h3>
+            <h3 class="mt-5 text-xl font-semibold text-white">Somatic acupressure massager</h3>
             <p class="mt-3 text-sm leading-6 text-slate-400">
-              Adds a calming, tactile ritual that fits the wellness-first story and helps the product feel unique.
+              Helps calm the moment, reconnect mind and body, and restore focus before the next decision.
             </p>
           </article>
 
           <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-slate-950/30">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/15 text-cyan-100">04</div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Launch-ready narrative</h3>
+            <h3 class="mt-5 text-xl font-semibold text-white">Clarity ritual</h3>
             <p class="mt-3 text-sm leading-6 text-slate-400">
-              Strong enough for a concept page, crowdfunding prelaunch, investor deck, or early manufacturing outreach.
+              Turns a stressful moment into a small sequence: reflect, relax, verify, and decide.
             </p>
           </article>
         </div>
@@ -245,40 +290,40 @@
         <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl shadow-slate-950/30">
             <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">How it works</div>
-            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white">The product story is easy to understand in three beats.</h2>
+            <h2 class="mt-4 text-3xl font-bold tracking-tight text-white">A short ritual before the next decision.</h2>
             <p class="mt-4 max-w-xl text-slate-400">
-              The site makes it obvious that Bacrub is about awareness, composure, and better decisions—not novelty for novelty’s sake.
+              BacRub gives you a physical pause: reflect, release tension, verify what is true, and choose with more clarity than the moment started with.
             </p>
             <div class="mt-8 rounded-3xl border border-cyan-300/20 bg-cyan-400/10 p-6">
-              <div class="text-sm font-semibold text-cyan-100">Suggested homepage angle</div>
-              <p class="mt-3 text-xl font-semibold leading-8 text-white">
-                “Know your level. Keep your cool.”
-              </p>
+                  <div class="text-sm font-semibold text-cyan-100">The reminder</div>
+                  <p class="mt-3 text-xl font-semibold leading-8 text-white">
+                    Know Before You Go™. Know Before You React™. Know Before You Act™.
+                  </p>
             </div>
           </div>
 
           <div class="grid gap-6">
             <article class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
               <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Step 1</div>
-              <h3 class="mt-3 text-2xl font-semibold text-white">Power on and breathe</h3>
+              <h3 class="mt-3 text-2xl font-semibold text-white">Check what is true</h3>
               <p class="mt-3 text-slate-400">
-                Turn it on, use the mouthpiece, and let the sensor do the read. The form factor keeps it low-profile.
+                Use the breathalyzer when uncertainty matters and guessing is not good enough.
               </p>
             </article>
 
             <article class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
               <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Step 2</div>
-              <h3 class="mt-3 text-2xl font-semibold text-white">Read the result instantly</h3>
+              <h3 class="mt-3 text-2xl font-semibold text-white">Ground the reaction</h3>
               <p class="mt-3 text-slate-400">
-                The OLED gives quick BAC feedback and status cues without needing an app or a complicated setup.
+                    Use the somatic acupressure massager to release tension before stress turns into a snap decision.
               </p>
             </article>
 
             <article class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
               <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Step 3</div>
-              <h3 class="mt-3 text-2xl font-semibold text-white">Take a beat before the next move</h3>
+              <h3 class="mt-3 text-2xl font-semibold text-white">Write before acting</h3>
               <p class="mt-3 text-slate-400">
-                The massage end-cap turns the interaction into a pause. That pause is part of the value proposition.
+                Use the pen to capture the thought, make it visible, and decide from a clearer place.
               </p>
             </article>
           </div>
@@ -288,33 +333,33 @@
       <section id="why" class="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
         <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl shadow-slate-950/30 lg:p-10">
           <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-            <div>
-              <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Why this positioning works</div>
-              <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Most breathalyzer pages feel utilitarian. This one can feel lifestyle-forward.
-              </h2>
-              <p class="mt-5 text-slate-400">
-                That is the opening. You can tell a story around confidence, discretion, and personal rituals—not just test accuracy or hardware specs.
-              </p>
-            </div>
+                <div>
+                  <div class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Why BacRub</div>
+                  <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    More than a safety device. A clarity tool.
+                  </h2>
+                  <p class="mt-5 text-slate-400">
+                    BacRub is not about catching someone doing something wrong. It is about helping someone create clarity before action.
+                  </p>
+                </div>
 
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
-                <div class="text-sm font-semibold text-white">For nightlife</div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">Make the “should I drive?” moment more deliberate and less awkward.</p>
-              </div>
-              <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
-                <div class="text-sm font-semibold text-white">For hosts</div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">A premium conversation piece that still provides useful awareness.</p>
-              </div>
-              <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
-                <div class="text-sm font-semibold text-white">For prelaunch</div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">The copy is modular enough for a waitlist, crowdfunding page, or investor landing page.</p>
-              </div>
-              <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
-                <div class="text-sm font-semibold text-white">For brand building</div>
-                <p class="mt-2 text-sm leading-6 text-slate-400">The visual language can expand into renders, packaging, emails, and launch creative.</p>
-              </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
+                    <div class="text-sm font-semibold text-white">Leaving</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Know Before You Go™ when the ride decision matters.</p>
+                  </div>
+                  <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
+                    <div class="text-sm font-semibold text-white">Reacting</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Know Before You React™ when emotion is louder than judgment.</p>
+                  </div>
+                  <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
+                    <div class="text-sm font-semibold text-white">Acting</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Know Before You Act™ when writing it down can change the next step.</p>
+                  </div>
+                  <div class="rounded-3xl border border-white/10 bg-slate-950/50 p-5">
+                    <div class="text-sm font-semibold text-white">Carrying</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">A pen-shaped tool stays close because it is useful even before the hard moment arrives.</p>
+                  </div>
             </div>
           </div>
         </div>
@@ -323,12 +368,12 @@
       <section id="waitlist" class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
         <div class="rounded-[2.5rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-white/5 to-fuchsia-500/10 p-8 shadow-2xl shadow-slate-950/40 lg:p-12">
           <div class="mx-auto max-w-3xl text-center">
-            <div class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-100">Waitlist CTA</div>
+            <div class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-100">Early access</div>
             <h2 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Start with interest. Validate before you build the full funnel.
+              Carry clarity before the next moment finds you.
             </h2>
             <p class="mt-5 text-base leading-7 text-slate-300 sm:text-lg">
-              This GitHub Pages version is ready to collect interest once you connect the form to any form backend.
+              Join the early list for BacRub updates, launch timing, and first-access availability.
             </p>
           </div>
 
@@ -350,7 +395,7 @@
           </form>
 
           <p id="waitlistMessage" class="mt-4 text-center text-sm text-slate-400" aria-live="polite">
-            Demo mode is on right now. Plug in a real endpoint later and the form can go live.
+            We will only use your email for BacRub launch updates.
           </p>
         </div>
       </section>
@@ -358,21 +403,21 @@
       <section id="faq" class="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
         <div class="grid gap-6 lg:grid-cols-3">
           <div class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
-            <h3 class="text-lg font-semibold text-white">Is this production-ready?</h3>
+            <h3 class="text-lg font-semibold text-white">Is BacRub only a breathalyzer?</h3>
             <p class="mt-3 text-sm leading-6 text-slate-400">
-              This page is a polished concept/demo. The copy, layout, and structure are ready to evolve into a real launch site.
+                  No. The breathalyzer is one part of the ritual. BacRub also includes a somatic acupressure massager and pen utility for reflection.
             </p>
           </div>
           <div class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
-            <h3 class="text-lg font-semibold text-white">What should come next?</h3>
+            <h3 class="text-lg font-semibold text-white">When should I use it?</h3>
             <p class="mt-3 text-sm leading-6 text-slate-400">
-              Add real product renders, decide the primary CTA, connect a waitlist backend, and tighten the compliance language.
+              Before leaving, before reacting, or before acting. It is meant for the pause before the next decision.
             </p>
           </div>
           <div class="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-slate-950/30">
-            <h3 class="text-lg font-semibold text-white">Do we keep the wellness angle?</h3>
+            <h3 class="text-lg font-semibold text-white">Does it replace judgment?</h3>
             <p class="mt-3 text-sm leading-6 text-slate-400">
-              Yes. It is the most differentiated part of the concept, as long as the page still clearly explains the BAC function first.
+              No. BacRub is designed to create awareness and clarity, not to make legal, medical, or driving decisions for you.
             </p>
           </div>
         </div>
@@ -387,11 +432,11 @@
     <footer class="border-t border-white/10 bg-slate-950/70">
       <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
-          <span class="font-semibold tracking-[0.2em] text-slate-200">BACRUB</span>
-          <span class="ml-3">GitHub Pages-ready landing page built with Tailwind.</span>
+          <span class="font-black tracking-[0.08em]"><span class="text-white">BAC</span><span class="text-cyan-500">RUB</span></span>
+          <span class="ml-3 font-semibold tracking-[0.14em] text-slate-300">KNOW BEFORE YOU GO.</span>
         </div>
-        <div class="flex flex-wrap gap-4">
-          <a href="#features" class="transition hover:text-white">Features</a>
+            <div class="flex flex-wrap gap-4">
+              <a href="#features" class="transition hover:text-white">Features</a>
           <a href="#how-it-works" class="transition hover:text-white">How it works</a>
           <a href="#waitlist" class="transition hover:text-white">Waitlist</a>
         </div>

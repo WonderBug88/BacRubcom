@@ -1,0 +1,76 @@
+name: Generate Runway Asset
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: Runway prompt text
+        required: true
+        type: string
+      prompt_image:
+        description: Optional reference image URL
+        required: false
+        type: string
+      output_path:
+        description: File path to write in the repo
+        required: true
+        default: assets/runway/latest.mp4
+        type: string
+      ratio:
+        description: Output ratio or resolution
+        required: true
+        default: 1280:720
+        type: string
+      duration:
+        description: Video duration in seconds
+        required: true
+        default: "5"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      RUNWAYML_API_SECRET: ${{ secrets.RUNWAYML_API_SECRET }}
+      RUNWAY_API_VERSION: "2024-11-06"
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Test Runway client
+        run: node --test tests/runway-client.test.mjs
+
+      - name: Generate Runway media
+        env:
+          BACRUB_RUNWAY_PROMPT: ${{ inputs.prompt }}
+          BACRUB_RUNWAY_PROMPT_IMAGE: ${{ inputs.prompt_image }}
+          BACRUB_RUNWAY_OUTPUT_PATH: ${{ inputs.output_path }}
+          BACRUB_RUNWAY_RATIO: ${{ inputs.ratio }}
+          BACRUB_RUNWAY_DURATION: ${{ inputs.duration }}
+        run: |
+          node scripts/generate-runway-asset.mjs \
+            --prompt "$BACRUB_RUNWAY_PROMPT" \
+            --prompt-image "$BACRUB_RUNWAY_PROMPT_IMAGE" \
+            --out "$BACRUB_RUNWAY_OUTPUT_PATH" \
+            --task-json "assets/runway/latest-task.json" \
+            --ratio "$BACRUB_RUNWAY_RATIO" \
+            --duration "$BACRUB_RUNWAY_DURATION"
+
+      - name: Commit generated media
+        env:
+          BACRUB_RUNWAY_OUTPUT_PATH: ${{ inputs.output_path }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$BACRUB_RUNWAY_OUTPUT_PATH" assets/runway/latest-task.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update Runway generated Bacrub asset"
+          git push
