@@ -115,3 +115,21 @@ test('privacy and terms pages cover static-site launch basics', async () => {
   assert.match(terms, /not legal, medical, or driving advice/i);
   assert.match(terms, /blood alcohol concentration/i);
 });
+
+test('homepage uses safe performance hints for static media', async () => {
+  const html = await readFile('index.html', 'utf8');
+
+  assert.match(html, /<link rel="preload" as="image" href="assets\/media\/bacrub-product-bac-screen\.png" fetchpriority="high" \/>/);
+  assert.match(html, /id="heroVideo"[\s\S]*preload="metadata"[\s\S]*aria-label="BacRub product video"/);
+  assert.match(html, /src="assets\/media\/bacrub-product-bac-screen\.png"[\s\S]*width="1448"[\s\S]*height="1086"[\s\S]*loading="lazy"[\s\S]*decoding="async"/);
+  assert.match(html, /src="assets\/media\/bacrub-calendar-pen\.png"[\s\S]*width="1447"[\s\S]*height="1087"[\s\S]*loading="lazy"[\s\S]*decoding="async"/);
+  assert.match(html, /<script src="assets\/app\.js" defer><\/script>/);
+});
+
+test('custom 404 stays out of the search index while preserving navigation', async () => {
+  const html = await readFile('404.html', 'utf8');
+
+  assert.match(html, /<meta name="robots" content="noindex,follow" \/>/);
+  assert.match(html, /href="privacy\.html"/);
+  assert.match(html, /href="terms\.html"/);
+});

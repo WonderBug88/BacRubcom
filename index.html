@@ -26,6 +26,7 @@
       content="A clarity tool that combines a pen, somatic acupressure massager, and breathalyzer in one pocketable ritual."
     />
     <meta name="twitter:image" content="https://bacrub.com/assets/media/bacrub-product-bac-screen.png" />
+    <link rel="preload" as="image" href="assets/media/bacrub-product-bac-screen.png" fetchpriority="high" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -159,6 +160,8 @@
           src="assets/runway/latest.mp4"
           poster="assets/media/bacrub-product-bac-screen.png"
           class="absolute inset-0 h-full w-full object-cover"
+          preload="metadata"
+          aria-label="BacRub product video"
           autoplay
           loop
           muted
@@ -233,6 +236,10 @@
             src="assets/media/bacrub-product-bac-screen.png"
             alt="Bacrub pen breathalyzer with BAC reading on the screen and massage end cap"
             data-runway-src="assets/runway/latest.mp4"
+            width="1448"
+            height="1086"
+            loading="lazy"
+            decoding="async"
             class="aspect-[4/3] w-full rounded-[1.5rem] border border-white/10 object-cover shadow-2xl shadow-slate-950/50"
           />
         </div>
@@ -318,6 +325,10 @@
           <img
             src="assets/media/bacrub-calendar-pen.png"
             alt="Bacrub pen on a calendar with know before you go message"
+            width="1447"
+            height="1087"
+            loading="lazy"
+            decoding="async"
             class="h-full min-h-72 w-full object-cover"
           />
           <div class="flex flex-col justify-center p-6 lg:p-8">
@@ -523,6 +534,6 @@
       </div>
     </footer>
 
-    <script src="assets/app.js"></script>
+    <script src="assets/app.js" defer></script>
   </body>
 </html>
