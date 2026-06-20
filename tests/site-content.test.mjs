@@ -79,3 +79,39 @@ test('homepage uses the Know Before pillar story', async () => {
   assert.doesNotMatch(html, /concept page/);
   assert.doesNotMatch(html, /investor deck/);
 });
+
+test('homepage exposes production SEO metadata', async () => {
+  const html = await readFile('index.html', 'utf8');
+
+  assert.match(html, /<link rel="canonical" href="https:\/\/bacrub\.com\/" \/>/);
+  assert.match(html, /<meta property="og:url" content="https:\/\/bacrub\.com\/" \/>/);
+  assert.match(html, /<meta property="og:image" content="https:\/\/bacrub\.com\/assets\/media\/bacrub-product-bac-screen\.png" \/>/);
+  assert.match(html, /<meta name="twitter:card" content="summary_large_image" \/>/);
+  assert.match(html, /<script type="application\/ld\+json">/);
+  assert.match(html, /"@type": "Product"/);
+  assert.match(html, /"@type": "FAQPage"/);
+});
+
+test('search crawler files point to the canonical site', async () => {
+  const robots = await readFile('robots.txt', 'utf8');
+  const sitemap = await readFile('sitemap.xml', 'utf8');
+
+  assert.match(robots, /User-agent: \*/);
+  assert.match(robots, /Allow: \//);
+  assert.match(robots, /Sitemap: https:\/\/bacrub\.com\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/bacrub\.com\/<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/bacrub\.com\/privacy\.html<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/bacrub\.com\/terms\.html<\/loc>/);
+});
+
+test('privacy and terms pages cover static-site launch basics', async () => {
+  const privacy = await readFile('privacy.html', 'utf8');
+  const terms = await readFile('terms.html', 'utf8');
+
+  assert.match(privacy, /BacRub Privacy Policy/);
+  assert.match(privacy, /early access/i);
+  assert.match(privacy, /email address/i);
+  assert.match(terms, /BacRub Terms/);
+  assert.match(terms, /not legal, medical, or driving advice/i);
+  assert.match(terms, /blood alcohol concentration/i);
+});
