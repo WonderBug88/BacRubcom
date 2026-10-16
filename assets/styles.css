@@ -2,6 +2,48 @@ html {
   scroll-behavior: smooth;
 }
 
+#colors { scroll-margin-top: 7rem; }
+.color-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.color-design { min-width: 0; margin: 0; }
+.color-image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+.color-image-link:focus-visible {
+  outline: 3px solid #38b2cd;
+  outline-offset: 5px;
+}
+.color-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+.color-design figcaption { padding-top: 1rem; }
+.color-design h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.color-design p {
+  margin: 0.5rem 0 0;
+  color: #cbd5e1;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+@media (max-width: 800px) {
+  .color-gallery { grid-template-columns: 1fr; gap: 2rem; }
+}
+
 body {
   background:
     radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 28%),
